@@ -8,7 +8,7 @@ public class CorrectAnswerView : MonoBehaviour
 
     private void Start()
     {
-        ShowCountCorrentAnswer(_correctAnswerCount.CountCorrectAnswer);
+        ShowCountCorrentAnswer(_correctAnswerCount.CountCorrectAnswer); // при включении панели отобразить количество верных ответов
     }
 
     public void ShowCountCorrentAnswer(int correctAnswerCount)

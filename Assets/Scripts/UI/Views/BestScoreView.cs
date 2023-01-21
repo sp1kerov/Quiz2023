@@ -7,15 +7,13 @@ public class BestScoreView : MonoBehaviour
 
     private const string _keyBestCountCorrectAnswer = "Best Count Correct Answer";
 
-    private void Start()
+    private void Start() // отобразить лучший счет на панели меню
     {
-        print("Awake _____ ShowCountCorrentAnswer");
         if (!PlayerPrefs.HasKey(_keyBestCountCorrectAnswer))
         {
             PlayerPrefs.SetInt(_keyBestCountCorrectAnswer, 0);
         }
 
-        print(PlayerPrefs.GetInt(_keyBestCountCorrectAnswer));
         _textCorrectAnswer.text = PlayerPrefs.GetInt(_keyBestCountCorrectAnswer) + "";
     }
 }

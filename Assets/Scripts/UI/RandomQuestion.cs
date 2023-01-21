@@ -11,13 +11,13 @@ public class RandomQuestion : MonoBehaviour
         CheckQuestionDisplayStatus();
     }
 
-    public void ChageQuestionTypeDisplay()
+    public void ChageQuestionTypeDisplay() // сменить тип вподбора вопросов
     {
         _questionDisplay.RandomQuestionSwitcher();
         CheckQuestionDisplayStatus();
     }
 
-    private void CheckQuestionDisplayStatus()
+    private void CheckQuestionDisplayStatus() // смена текста на кнопки включения рандомного подбора вопросов
     {
         if (_questionDisplay.OnRandomQuestion == false)
         {

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +8,6 @@ public class TimeView : MonoBehaviour
 
     private void Start()
     {
-        _textTime.text = timer.TIme.ToString("mm':'ss");
+        _textTime.text = timer.TIme.ToString("mm':'ss"); // отображаем затраченное время на ответы
     }
 }

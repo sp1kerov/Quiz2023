@@ -20,11 +20,11 @@ public class QuestionDisplay : MonoBehaviour
 
     private void Start()
     {
-        _questions.AddRange(_questionDataScriptable.questions);
+        _questions.AddRange(_questionDataScriptable.questions); // копируем вопросы в список
         SelectQuestion();
     }
 
-    public void RandomQuestionSwitcher()
+    public void RandomQuestionSwitcher() // рандомный вариант подбора вопросов
     {
         if (_onRandomQuestion == false)
         {
@@ -36,11 +36,11 @@ public class QuestionDisplay : MonoBehaviour
         }
     }
 
-    public void SelectQuestion()
+    public void SelectQuestion() // варианты выбора вопросов
     {
         if (_questions.Count > 0)
         {
-            if (_onRandomQuestion == true)
+            if (_onRandomQuestion == true) // рандомно
             {
                 int indexQuestion = Random.Range(0, _questions.Count);
                 _selectedQuetion = _questions[indexQuestion];
@@ -48,7 +48,7 @@ public class QuestionDisplay : MonoBehaviour
                 SetButtons(_selectedQuetion);
                 _questions.RemoveAt(indexQuestion);
             }
-            else
+            else // последовательно
             {
                 _selectedQuetion = _questions[0];
                 SetQuestion(_selectedQuetion);
@@ -58,12 +58,12 @@ public class QuestionDisplay : MonoBehaviour
         }        
     }
 
-    private void SetQuestion(Question question)
+    private void SetQuestion(Question question) // отобразить овпрос
     {
         _questionText.text = question.questionText;
     }
 
-    private void SetButtons(Question question)
+    private void SetButtons(Question question) // отобразить варианты ответов
     {
         for (int i = 0; i < _answerButtons.Count; i++)
         {
